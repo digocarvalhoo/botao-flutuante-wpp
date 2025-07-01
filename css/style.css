@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 40px 40px 40px 0px;
+}
+
+.chat-form {
+  position: fixed;
+  bottom: 110px;
+  right: 75px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  width: 380px;
+  height: 320px;
+  display: none;
+  flex-direction: column;
+  border-radius: 20px;
+  z-index: 999;
+  overflow: hidden;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.95);
+
+  background-image: url('/img/background-wpp.jpg');
+  background-size: cover;
+  /* cobre toda a área */
+  background-position: center;
+  /* centraliza a foto */
+  background-repeat: no-repeat;
+  /* evita repetição */
+
+  padding-bottom: 15px;
+  /* Espaço interno na parte de baixo */
+  box-sizing: border-box;
+  /* Para considerar o padding na altura */
+
+}
+
+.chat-form.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.welcome {
+  /*parte superior do chat*/
+  background-color: #25D366;
+  height: 90px;
+  color: white;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  /* Adiciona o flexbox */
+  flex-direction: row;
+  /* Direção dos itens em linha */
+  align-items: center;
+  /* Alinha verticalmente no centro */
+  gap: 20px;
+  /* Espaço entre os itens */
+  position: relative;
+  /* necessário para posicionar o botão "X" */
+}
+
+.icon {
+  /*icone do ramancini*/
+  width: 50px;
+  border-radius: 50%;
+}
+
+.welcome p {
+  /*texto da barra superior do chat*/
+  font-weight: 300;
+  font-family: poppins, sans-serif;
+  font-size: 16px;
+}
+
+.close-btn {
+  /*Botão fechar*/
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chat-wpp {
+  background-color: #e1ffc7;
+  /* cor estilo msg recebida no WhatsApp */
+  color: #111;
+  font-size: 14px;
+  padding: 8px 12px;
+  margin: 5px 10px;
+  max-width: 70%;
+  max-height: 30%;
+  border-radius: 10px 10px 10px 0;
+  align-self: flex-start;
+  /* alinha à esquerda */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+  font-family: poppins, sans-serif;
+  animation: fadeIn 0.4s ease-in-out;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.p-chat-wpp {
+  font-weight: 300;
+  font-family: poppins, sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sendToWhatsApp {
+  display: flex;
+  /* ativa o flexbox no container */
+  justify-content: center;
+  /* centraliza horizontalmente */
+  align-items: center;
+  /* centraliza verticalmente */
+  height: 100%;
+  /* ocupa toda altura disponível (opcional, melhora o alinhamento vertical) */
+  padding: 15px 0 0 0;
+  /* espaçamento vertical (opcional) */
+  flex-grow: 1;
+  /* para ocupar o espaço restante */
+}
+
+.sendToWhatsApp button {
+  background-color: #25D366;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+
+  padding: 12px 30px;
+  /* espaçamento interno horizontal maior */
+  max-width: 100%;
+  /* garante que não ultrapasse o container */
+  width: 200px;
+}
+
+@media (max-width: 480px) {
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .chat-form {
+    width: 90%;
+    max-width: 360px;
+    height: 260px;
+    /* define uma altura fixa confortável */
+    bottom: 80px;
+    right: 5%;
+    left: 5%;
+    margin: auto;
+    padding-bottom: 8px;
+  }
+
+  .welcome {
+    height: 60px;
+    /* define altura real ao invés de limitar com max-height */
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    gap: 15px;
+  }
+
+  .welcome p {
+    font-weight: 300;
+    font-family: poppins, sans-serif;
+    font-size: 14px;
+  }
+
+  .sendToWhatsApp button {
+    font-size: 12px;
+    padding: 8px 20px;
+    width: 80%;
+  }
+
+  .chat-wpp {
+    font-size: 12px;
+    padding: 10px 10px;
+    margin-top: 10px;
+    max-height: 100px;
+    /* define um limite razoável para o balão */
+  }
+
+  .p-chat-wpp {
+    font-size: 13px;
+    font-weight: 300;
+    font-family: poppins, sans-serif;
+  }
+}
