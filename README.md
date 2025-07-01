@@ -5,7 +5,7 @@ Este projeto é um botão flutuante personalizado do WhatsApp com um mini chat i
 ## 🖼️ Demonstração
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Ícone do WhatsApp" width="80" />
+  <img src="/img/demonstration project.png" alt="Ícone do WhatsApp" width="80" />
 </p>
 
 > Clique no botão e abra um mini chat com mensagem de boas-vindas e botão para iniciar conversa direta no WhatsApp.
